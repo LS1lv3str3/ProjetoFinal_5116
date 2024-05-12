@@ -1,0 +1,55 @@
+\begin{titlepage}
+
+\centering
+
+\begin{tikzpicture}
+
+\node[inner sep=0pt] (logo) at (0,0.6)
+    {\includegraphics[scale=0.04]{Figures/0. General/linux_penguin.png}};
+{\setstretch{2.0}
+\node[text width = 0.58\textwidth, yshift = 0.5cm, right = 1.25cm of logo](title){\sffamily\huge\reporttitle};
+}   
+
+
+\node[text width = 0.6\textwidth, xshift = 0.1cm, yshift = 0.5cm, below = 0.5cm of title](subtitle){\sffamily\Large \reportsubtitle};
+
+\gettikzxy{(subtitle.south)}{\sffamily\subtitlex}{\subtitley}
+\gettikzxy{(title.north)}{\titlex}{\titley}
+% \draw[line width=1mm, Tue-red]($(logo.east)!0.5!(title.west)$) +(0,\subtitley) -- +(0,\titley);
+
+\end{tikzpicture}
+\vspace{3cm}
+% \sffamily\groupnumber
+
+\begin{table}[H]
+\centering
+\sffamily
+\large
+\begin{tabu} to 2.8\linewidth{cc}
+\textbf{Realizado por:}\\
+% \hline
+% \vspace{0.25cm}
+\sffamily\reportauthors
+\end{tabu}
+
+\end{table}
+
+\sffamily \grouptutor
+
+\tikz[remember picture,overlay]\node[anchor=south,inner sep=0pt] at (current page.south) {\includegraphics[width=\paperwidth]{Figures/0. General/tue_2.png}};
+
+\mbox{}
+\vfill
+\sffamily \Large \textcolor{white}{\placeanddate} \\
+
+
+
+\end{titlepage}
+
+
+
+
+
+
+
+
